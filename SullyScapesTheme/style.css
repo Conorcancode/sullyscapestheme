@@ -1,0 +1,535 @@
+/*
+Theme Name: SullyScapes Theme
+Author: Conor
+Version: 1.0.10
+*/
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("./media/blogBG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  h1, h2, h3, h4, h5, h6, legend {
+    font-family: sans-serif; }
+  
+  p, li, a, span, label {
+    font-family: "Merriweather", serif; }
+  
+/*Header & Footer*/
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid #8ef755;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  z-index: 997; }
+  .menu .menu-bar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    padding: 5px; }
+  .menu .menu-list {
+    width: 100%;
+    height: 0vh;
+    overflow: hidden;
+    transition: height .25s ease-out;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .menu .menu-list .menu-item {
+      text-align: center;
+      font-size: 1.25em;
+      margin-bottom: .5em; }
+      .menu .menu-list .menu-item a {
+        text-decoration: none;
+        color: #32292F; }
+      .menu .menu-list .menu-item .active {
+        border-bottom: 3px solid #8ef755; }
+  .menu .open-menu-list {
+    height: 40vh; }
+  .menu .logo {
+    box-sizing: content-box;
+    width: 20vw;
+    height: auto;
+    display: block; }
+  .menu .sandwichIcon {
+    color: #8ef755;
+    font-size: 2.5em;
+    display: block;
+    margin-right: 5px;
+    align-self: center;
+    cursor: pointer; }
+
+    #footer {
+        margin-top: 20px;
+        text-align: center;
+        border-top: #8ef755 2px solid;
+        width: 100%;
+        background-color: white;
+        height: 60px }
+    #footer p{
+        margin-bottom: 0;
+    }
+/*Header & Footer End*/
+/*Front Page*/
+
+.indexDiv{
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.75));
+    height: 100vh;
+    width: 100%;
+}
+
+.blogPageTitle{
+    margin: 0;
+    position: absolute;
+    top: 85%;
+    margin-left: 20%;
+    font-size: 3em;
+    color: white;
+}
+
+.authorStyle{
+    color: grey;
+    text-decoration: none;
+}
+
+.authorStyle a{
+    color: inherit;
+    text-decoration: inherit;
+}
+.frontBody{
+    position: relative;
+    top: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 800px 75px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.postArea{
+    grid-column: 1/span 1;
+    grid-row: 1/ span 2;
+    padding-left: 10px;
+
+
+}
+
+.frontSideBar{
+    grid-column: 2/span 1;
+    grid-row: 1/span 2;
+    border-left: 1px solid black;
+    margin-left: 20px;
+    background-color: rgb(255,255,255);
+    border: 5px solid rgb(210,210,210);
+    height: 775px;
+    width: 95%;
+    padding: 10px;
+}
+
+
+.frontSideBar ul{
+    list-style: none;
+}
+
+.frontSideBar li{
+    list-style: none;
+}
+
+.postCard{
+    border: 5px solid rgb(210,210,210);
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+    display: grid;
+    grid-template-columns: 350px 3fr;
+    grid-template-rows: 1fr;
+    background-color: rgba(255,255,255,1);
+    min-height: 223px;
+    padding: 10px;
+
+}
+
+.postText{
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+    align-self: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.postTitle{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.postThumbnail{
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    justify-self: start;
+    align-self: start;
+    margin: 8px 0px 5px 0px;
+    
+    overflow: hidden;
+    width: 350px;
+    height: 200px;
+    
+}
+
+.postThumbnail img{
+    width: auto;
+    height: 200px;
+    display: block;
+    margin: auto;
+    
+}
+
+.postContent{
+    color: rgb(50,50,50);
+}
+
+.frontFooter{
+
+    grid-column: 1/span 2;
+    grid-row: 2/ span 1;
+}
+
+.paginationFront{
+    background-color: white;
+    padding: 10px 0 10px 5px;
+    border: 5px solid rgb(210,210,210);
+}
+
+.pagination a{
+    text-decoration: none;
+    color: rgb(50,50,50);
+}
+
+.screen-reader-text{
+    margin: 0;
+}
+
+.page-numbers{
+    font-size: 1.5em;
+    background-color: rgb(225,225,225);
+    padding: 0px 10px;
+    border: 2px solid rgb(150,150,150);
+    border-radius: 5px;
+}
+
+.page-numbers:hover{
+    background-color: rgb(205,205,205);
+}
+
+.current{
+    background-color: rgb(100,100,100);
+    color: white;
+}
+
+.current:hover{
+    background-color: rgb(100,100,100);
+}
+/*Front Page End*/
+/* Sidebar */
+form .screen-reader-text{
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: grey;
+}
+
+.searchFormSideBar #s{
+    padding-left: 2%;
+    margin-left: 7%;
+}
+
+.searchFormSideBar{
+    margin-top: 10px;
+}
+
+#archives, #categories{
+    margin-top: 50px;
+}
+
+.sideTitle {
+    font-size: 1.5em;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: grey;
+}
+
+.cat-item a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    border: 2px solid rgb(175,175,175);
+    color: rgb(50,50,50);
+    padding: 5px 5px;
+    border-radius: 7px;
+    background-color: rgb(235,235,235);
+    font-family: sans-serif;
+}
+
+.cat-item a:hover{
+    background-color: rgb(50,50,50);
+    color: rgb(235,235,235);
+    border: 2px solid rgb(100,100,100)
+}
+
+.current-cat a{
+    background-color: rgb(175,175,175);
+    color:white;
+    border: rgb(235,235,235) solid 2px;
+}
+
+.current-cat a:hover{
+    background-color: rgb(175,175,175);
+    color:white;
+    border: rgb(235,235,235) solid 2px;
+}
+
+#archives a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(100,100,100);
+}
+
+#archives a:hover{
+    color: rgb(50,50,50);
+}
+/* Sidebar */
+/*Single Post Begin*/
+
+
+
+.singleBG{
+    min-height: 85vh;
+    margin: 80px 10px 0 10px;
+}
+.singlePostBody{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 3fr 100px;
+}
+
+.singlePostCard{
+    grid-row: 1/ span 1;
+    grid-column: 1/span 1;
+    border: 5px solid rgb(210,210,210);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+    padding: 15px;
+    background-color: white;
+    height: auto;
+    width: 100%;
+}
+
+.singlePostThumbnail{
+    overflow: hidden;
+}
+
+.singlePostThumbnail img{
+    width: 100%;
+    max-height: 600px;
+    margin: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.singleSideBar{
+    background-color: rgb(255,255,255);
+    border: 5px solid rgb(210,210,210);
+    grid-row: 1/span 1;
+    grid-column: 2/span 1;
+    height: auto;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.postTitle{
+    margin-top: 10px;
+}
+
+.singleSideBar{
+    padding: 10px;
+}
+
+.singleSideBar ul{
+    list-style: none;
+}
+
+.singleSideBar li{
+    list-style: none;
+}
+
+@media all and (max-width: 800px){
+    .singlePostBody{
+        display: block;
+        min-height: 80vh;
+    }
+
+    .singleSideBar{
+        margin: 20px 0 0 0;
+    }
+}
+
+/* Single Page End */
+/* Archive Page Begin */
+
+.archiveDiv{
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.75));
+    height: 25vh;
+    width: 100%;
+}
+
+.blogArchiveTitle{
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    margin-left: 12%;
+    font-size: 3em;
+    color: white;
+}
+
+.archiveBody{
+    position: relative;
+    top: 25vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 800px 75px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+
+/*Mobile Page Begin*/
+  @media screen and (max-width: 960px) {
+    #topMenu {
+      display: none;
+    }
+    #mobileMenu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      background-color: #7D593B;
+      position: fixed;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+      z-index: 998;
+    }
+    #mobileMenu #mobileLogo {
+      width: auto;
+      height: 75px;
+      border-bottom: 2px #8bf854 solid;
+      border-right: 2px #8bf854 solid;
+      margin: 0;
+    }
+.mobileTitle {
+      color: white;
+      font-family: sans-serif;
+      font-size: 2em;
+      margin: 0 6% 0 0;
+    }
+    .menuSandwich {
+      display: block;
+      cursor: pointer;
+      margin-right: 3%;
+    }
+	  .blogPageTitle{
+		margin-left: 2%;
+		  font-size: 2.25em;
+		  top: 77%;
+	  }
+	  
+	  .blogPageTitle img{
+		  display: none;
+	  }
+	  .frontBody{
+		  display: block;
+	  }
+	  .postArea{
+		  width: 95%;
+	  }
+	  .postCard{
+		  display: block;
+	  }
+	  
+	  .frontSideBar{
+          position: relative;
+		  left: -1%;
+		  height: auto;
+		  width: 94%;
+		  margin-top: 15px;
+	  }
+  }
+
+@media all and (orientation: landscape) {
+.menu .logo {
+    width: 75px; }
+.menu .open-menu-list {
+    height: 70vh; } }
+
+@media all and (min-width: 500px) {
+.menu .logo {
+    width: 75px; }
+.header-front {
+    background-size: 350%;
+    background-position: 30% 10%; }
+    .header-front .see-more-button {
+    font-size: 3em; } }
+
+@media all and (min-width: 800px) {
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end; }
+        .menu .sandwichIcon {
+        display: none; }
+        .menu .menu-bar {
+        display: inline-block;
+        width: auto;
+        margin-left: 10px; }
+        .menu .menu-list {
+        display: inline-block;
+        height: auto;
+        width: auto;
+        margin-right: 10px; }
+        .menu .menu-list .menu-item {
+            display: inline-block;
+            font-size: 1.5em;
+            margin: 0 10px 20px 0; }
+        }
+
+@media all and (max-width: 500px){
+    body{
+        background-size: 350%;
+    }
+}
