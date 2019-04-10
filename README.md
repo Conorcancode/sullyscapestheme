@@ -26,7 +26,7 @@ After installing, activate the theme, instructions found at https://codex.wordpr
 
 ## Requirements
 
-Requires the fontawesome free icon package
+Requires the fontawesome free icon package installed in the SullyScapesTheme/ directory
 
 ## License
 
