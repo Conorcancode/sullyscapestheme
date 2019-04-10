@@ -24,6 +24,10 @@ After installing, activate the theme, instructions found at https://codex.wordpr
     5. A live preview of any Theme (using your blog's content) can be seen by clicking Live Preview.
     6. To activate the Theme click the Activate button.
 
+## Requirements
+
+Requires the fontawesome free icon package
+
 ## License
 
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/#)
