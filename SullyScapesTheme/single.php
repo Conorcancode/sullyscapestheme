@@ -16,11 +16,16 @@ if (have_posts()) :
             Echo '<div class="postTitle">';
             the_title();
             Echo '</div>';
+            Echo '<div class="postAuthor">By: ';
+            the_author();
+            Echo '</div>';
             Echo '<div class="postContent">';
             
-            the_content();
+            the_content(sprintf(
+			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+			get_the_title()
+		) );
             Echo '</div>';
-            
    endwhile;
    the_posts_pagination();
 endif;
