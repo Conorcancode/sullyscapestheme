@@ -2,7 +2,7 @@
 
 A bare bones Wordpress theme. Made over the course of me learning HTML, CSS, JS.
 
-I'm sure it contains many practices that are not considered the best, but it is operational (and does not contain any !important tags)
+I'm sure it contains many practices that are not considered the best, but it is operational (and contains only !important tag :/)
 
 ## Installation
 

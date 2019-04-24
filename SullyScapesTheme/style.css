@@ -1,7 +1,7 @@
 /*
 Theme Name: SullyScapes Theme
 Author: Conor
-Version: 1.0.18
+Version: 1.0.22
 */
 
 html {
@@ -357,7 +357,7 @@ form .screen-reader-text{
     padding: 15px;
     background-color: white;
     height: auto;
-    width: 80%;
+    width: 100%;
     justify-self: center;
 }
 
@@ -367,12 +367,17 @@ form .screen-reader-text{
 
 .singlePostThumbnail img{
     width: auto;
-    max-height: 500px;
+    max-height: 200px;
     margin: auto;
     object-fit: cover;
     display: block;
 }
 
+.inline-image-left, .inline-image-right{
+    max-width: 50% !important;
+    min-width: 50px;
+    height: auto;
+}
 
 .inline-image-left{
     float: left;
@@ -580,15 +585,27 @@ form .screen-reader-text{
             display: inline-block;
             font-size: 1.65em;
             margin: 0 10px 25px 0; }
-@media all and (max-width: 500px){
-    body{
-        background-size: 350%;
+    .singlePostCard{
+        width: 80%;
     }
-
+    .singlePostThumbnail img{
+        width: auto;
+        max-height: 200px;
+    }
     .singlePostThumbnail img{
         height: 200px;
         max-height: none;
         width: auto;
     }
+
+    .inline-image-right, .inline-image-left{
+        height: none;
+    }
 }
+@media all and (max-width: 500px){
+    body{
+        background-size: 350%;
+    }
+
+
 }
